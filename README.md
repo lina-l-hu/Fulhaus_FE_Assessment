@@ -1,6 +1,7 @@
 # Fulhaus_FE_Assessment
 
-Shop page with sliding drawer cart. Responsive with 3 breakpoints for mobile, tablet, desktop.
+Shop page with sliding drawer cart. 
+Responsive with 3 breakpoints for mobile, tablet, desktop. Product cards are kept the same size for all screens to promote shopability. 
 
 ## Available Scripts
 
