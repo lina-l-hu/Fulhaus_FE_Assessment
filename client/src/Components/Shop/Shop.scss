@@ -1,0 +1,9 @@
+@import "../../Variables.scss";
+
+.shopWrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 0 35px;
+    background-color: $colorBackground;
+}
