@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import "./Header.css";
+import "./headerStyles/Header.css";
 import { CartContext } from "../Cart/CartContext";
 
 

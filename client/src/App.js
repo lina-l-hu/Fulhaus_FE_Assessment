@@ -2,8 +2,8 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Shop from "./Components/Shop/Shop";
 import Header from "./Components/Header/Header";
 import Cart from "./Components/Cart/Cart";
-import "./GlobalStyles.css";
-import "./App.css";
+import "./generalStyles/GlobalStyles.css";
+import "./generalStyles/App.css";
 
 function App() {
 

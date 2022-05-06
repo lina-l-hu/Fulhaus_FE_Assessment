@@ -1,7 +1,7 @@
 
 import ShopBanner from "./ShopBanner";
 import ProductGrid from "./ProductGrid";
-import "./Shop.css";
+import "./shopStyles/Shop.css";
 
 const Shop = () => {
     return (

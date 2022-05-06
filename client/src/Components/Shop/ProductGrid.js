@@ -1,6 +1,6 @@
 import { useEffect, useReducer } from "react";
 import ProductPreview from "./ProductPreview";
-import "./ProductGrid.css";
+import "./shopStyles/ProductGrid.css";
 
 const initialState = {
     products: null, 

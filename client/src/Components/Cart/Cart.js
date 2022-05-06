@@ -1,7 +1,7 @@
 import { useContext, useRef } from "react";
 import { CartContext } from "./CartContext";
 import CartItem from "./CartItem";
-import "./Cart.css";
+import "./cartStyles/Cart.css";
 
 const Cart = () => {
 
