@@ -1,0 +1,12 @@
+.productGridWrapper { 
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 65px;
+    row-gap: 96px;
+    justify-content: center;
+    align-items: space-evenly;
+    padding: 83px;
+    position: relative;
+    padding: 96px 48px;
+}

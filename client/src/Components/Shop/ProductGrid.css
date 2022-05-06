@@ -1,0 +1,21 @@
+.productGridWrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-column-gap: 65px;
+          column-gap: 65px;
+  row-gap: 96px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: space-evenly;
+      -ms-flex-align: space-evenly;
+          align-items: space-evenly;
+  padding: 83px;
+  position: relative;
+  padding: 96px 48px;
+}
+/*# sourceMappingURL=ProductGrid.css.map */

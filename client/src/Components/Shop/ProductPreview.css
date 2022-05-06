@@ -1,0 +1,85 @@
+.productPreviewWrapper {
+  position: relative;
+  border-radius: 40px;
+  width: 380px;
+  height: 385px;
+  padding: 34px 42px 34px 42px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.productPreviewWrapper img {
+  border-radius: 40px;
+}
+
+.imageDiv {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.imageDiv img {
+  border-radius: 40px;
+}
+
+.infoOverlay {
+  border-radius: 40px;
+  width: 380px;
+  height: 385px;
+  padding: 34px 42px 34px 42px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  background-color: #000000cc;
+  color: white;
+  font-family: "Crimson Pro", serif;
+}
+
+.purchaseInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.purchaseInfo button {
+  font-size: 24px;
+  font-family: "Crimson Pro", serif;
+  background: transparent;
+}
+
+.purchaseInfo p {
+  font-size: 36px;
+  line-height: 46.79px;
+}
+/*# sourceMappingURL=ProductPreview.css.map */

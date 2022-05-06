@@ -1,0 +1,17 @@
+@import "../Variables.scss";
+
+.headerWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    padding: 11px 35px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+
+    p { 
+        font-family: $fontButton;
+        font-size: 36px;
+    }
+}
