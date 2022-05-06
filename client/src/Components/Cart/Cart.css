@@ -1,6 +1,94 @@
 .cartWrapper {
-  width: 42.78%;
+  position: fixed;
+  top: 72px;
+  right: 0;
+  z-index: 20;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.cartOpen {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.emptyCartMessage {
+  font-size: 20px;
+  font-style: italic;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 35px;
+}
+
+.cartContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: white;
   height: 92.2vh;
-  padding: 35px;
+  padding: 0 5% 8% 5%;
+}
+
+.cartItems {
+  overflow: scroll;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.checkoutDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.checkoutDiv div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 20px 0;
+}
+
+.checkoutDiv p {
+  font-size: 36px;
+  font-family: "Montserrat", sans-serif;
+}
+
+@media screen and (max-width: 767px) {
+  .cartContent {
+    width: 100vw;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .cartContent {
+    width: 616px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .cartContent {
+    width: 616px;
+  }
 }
 /*# sourceMappingURL=Cart.css.map */

@@ -51,22 +51,83 @@ input{
 
 
 //defined global styles
-h1 {
-    font-size: 96px;
+h1, h2, h3, h4, h5 {
     font-family: $fontMain;
 }
 
-h3 {
-    font-size: 48px;
-    line-height: 55px;
-    font-family: $fontMain;
+@media screen and (max-width: $mobileMaxBreakpoint) {
+    h1 {
+        font-size: 56px;
+    }
+    
+    h2 {
+        font-size: 48px;
+        line-height: 55px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+    
+    h4 {
+        font-size: 30px;
+        line-height: 38.99px;
+    }
+    
+    h5 {
+        font-size: 24px;
+    }
 }
 
-h4 {
-    font-size: 30px;
-    line-height: 38.99px;
-    font-family: $fontMain;
+@media screen and (min-width: $tabletMinBreakpoint) and (max-width: $tabletMaxBreakpoint) {
+    h1 {
+        font-size: 76px;
+    }
+
+    h2 {
+        font-size: 48px;
+        line-height: 55px;
+    }
+
+    h3 {
+        font-size: 30px;
+    }
+
+    h4 {
+        font-size: 30px;
+        line-height: 38.99px;
+    }
+
+    h5 {
+        font-size: 24px;
+    }
 }
+
+@media screen and (min-width: $desktopMinBreakpoint) {
+    h1 {
+        font-size: 96px;
+    }
+
+    h2 {
+        font-size: 48px;
+        line-height: 55px;
+    }
+
+    h3 {
+        font-size: 36px;
+    }
+
+    h4 {
+        font-size: 30px;
+        line-height: 38.99px;
+    }
+
+    h5 {
+        font-size: 24px;
+    }
+}
+
+
 
 button {
     font-family: $fontButton;
@@ -76,4 +137,18 @@ button {
     padding: 10px 20px;
     border: none;
     cursor: pointer;
+}
+
+
+
+@media screen and (max-width: $mobileMaxBreakpoint) {
+
+}
+
+@media screen and (min-width: $tabletMinBreakpoint) and (max-width: $tabletMaxBreakpoint) {
+
+}
+
+@media screen and (min-width: $desktopMinBreakpoint) {
+    
 }

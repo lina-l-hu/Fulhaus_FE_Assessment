@@ -5,8 +5,8 @@ const ShopBanner = () => {
 
     return (
         <div className="bannerWrapper">
-            <div className="imgDiv flip">
-                <img className="flip" src={bannerImage} alt="yellow chair in living room"/>
+            <div className="bannerImage">
+                <img  src={bannerImage} alt="yellow chair in living room" />
             </div>
     
             <div className="textBanner">

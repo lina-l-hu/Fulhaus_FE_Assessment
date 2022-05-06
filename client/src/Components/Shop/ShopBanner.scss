@@ -6,33 +6,28 @@
     justify-content: center;
 }
 
-.imgDiv {
-    max-height: 700px;
-    overflow: hidden;
+.bannerImage {
+    margin-top: -22%;
 
     img {
         width: 100%;
+        height: auto;
     }
 
 }
 
-.flip {
-	-webkit-transform: rotate(180deg);
-	-moz-transform:    rotate(180deg);
-	-ms-transform:     rotate(180deg);
-	-o-transform:      rotate(180deg);
-	transform:         rotate(180deg);
-}
 
 .textBanner {
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-color: $colorBanner;
-    height: 316px;
+    // height: 316px;
     width: 100%;
-    margin-top: -180px;
+    // margin-top: -240px;
+    margin-top: -15%;
     z-index: 10;
+    padding: 8%;
 
     h1 {
         color: white;
