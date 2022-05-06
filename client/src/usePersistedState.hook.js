@@ -1,3 +1,5 @@
+//Custom hook to store and retrieve values from local storage (used for the Cart)
+
 import {useState, useEffect} from "react";
 
 const usePersistedState = (defaultValue, key) => {

@@ -1,7 +1,9 @@
+//Context keeping track of cart related states
+
+
 import { createContext, useState, useRef } from "react";
 import usePersistedState from "../../usePersistedState.hook";
 
-//Context keeping track of cart related states
 export const CartContext = createContext(null);
 
 export const CartContextProvider = ({ children }) => {
@@ -12,17 +14,20 @@ export const CartContextProvider = ({ children }) => {
       "current-cart"
     );
   
-    //state to indicate whether to display CartModal or not
+    //state to indicate whether to display Cart
     const [displayCart, setDisplayCart] = useState(false);
 
-    //reference to the CART button for opening cart
+    //reference to the CART button (to exclude from "outside clicks" to close Cart)
     const cartButtonRef = useRef();
-    //reference to the Add To Cart button to prompt opening of the cart
+
+    //reference to the Add To Cart button (to exclude from "outside clicks" to close Cart)
     const addToCartButtonRef = useRef();
-    
+
+    //reference to the remove button for a Cart Item (to exclude from "outside clicks" to close Cart)
 
     return (
-        <CartContext.Provider value={{ selectedItems, setSelectedItems, displayCart, setDisplayCart, cartButtonRef, addToCartButtonRef}}>
+        <CartContext.Provider value={{ selectedItems, setSelectedItems, displayCart, setDisplayCart, 
+                                cartButtonRef, addToCartButtonRef}}>
             {children}
         </CartContext.Provider>
     )

@@ -7,6 +7,7 @@ import "./generalStyles/App.css";
 
 function App() {
 
+  //routing home route to Shop page as well for now
   return (
       <BrowserRouter>
         <div className="main">

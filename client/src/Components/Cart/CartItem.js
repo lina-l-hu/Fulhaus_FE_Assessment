@@ -1,17 +1,21 @@
+//Cart Item component
+
 import { useContext } from "react";
 import { CartContext } from "./CartContext";
 import "./cartStyles/CartItem.css";
 
 const CartItem = ({SKU, productName, brandName, retailPrice, productImage}) => {
     
-    const { selectedItems, setSelectedItems, displayCart, setDisplayCart } = useContext(CartContext);
+    const { selectedItems, setSelectedItems, setDisplayCart } = useContext(CartContext);
 
     //change productName to title casing
     const formattedProductName = productName.toLowerCase().split(' ').map((word) => {
         return (word.charAt(0).toUpperCase() + word.slice(1));
       }).join(' ');
 
-    const handleRemoveFromCart = () => {
+    //onClick function to remove item from Cart
+    const handleRemoveFromCart = (e) => {
+
         //as there may be duplicate items in the cart, we will only delete the first one found
         const firstIndex = selectedItems.findIndex((item) => item.SKU === SKU);
         const updatedCart = [...selectedItems.slice(0, firstIndex), ...selectedItems.slice(firstIndex+1)];
@@ -34,7 +38,7 @@ const CartItem = ({SKU, productName, brandName, retailPrice, productImage}) => {
             </div>
 
             <div className="deleteDiv">
-                <button onClick={handleRemoveFromCart}>&times;</button>
+                <button onClick={handleRemoveFromCart} className="removeButton">&times;</button>
             </div>
 
         </div>

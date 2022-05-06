@@ -1,3 +1,5 @@
+//Product card in Profile Grid component
+
 import { useState, useContext } from "react";
 import { CartContext } from "../Cart/CartContext";
 import "./shopStyles/ProductPreview.css"
@@ -7,14 +9,14 @@ const ProductPreview = ({SKU, productName, brandName, retailPrice, productImage}
     //state to indicate whether the mouse is over this component
     const [ hoverMode, setHoverMode ] = useState(false);
 
-    const { selectedItems, setSelectedItems, setDisplayCart, displayCart, addToCartButtonRef } = useContext(CartContext);
-    console.log("display cart", displayCart);
+    const { selectedItems, setSelectedItems, setDisplayCart, addToCartButtonRef } = useContext(CartContext);
+    
     //change productName to title casing
     const formattedProductName = productName.toLowerCase().split(' ').map((word) => {
         return (word.charAt(0).toUpperCase() + word.slice(1));
       }).join(' ');
 
-    
+    //onClick for Add to Cart button
     const handleAddToCart = () => {
         
         const productToAdd = {
@@ -31,7 +33,7 @@ const ProductPreview = ({SKU, productName, brandName, retailPrice, productImage}
         setSelectedItems(newCart);
     }
 
-    //I would normally wrap the img tags in a NavLink to a product details page
+    //Normally this component would be wrapped in a NavLink to a product details page
     return (
         <div className="productPreviewWrapper" 
             onMouseEnter={() => setHoverMode(true)}

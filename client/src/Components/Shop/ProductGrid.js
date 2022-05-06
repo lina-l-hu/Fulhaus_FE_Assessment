@@ -1,6 +1,10 @@
+//Product Grid on Shop page component
+
 import { useEffect, useReducer } from "react";
 import ProductPreview from "./ProductPreview";
 import "./shopStyles/ProductGrid.css";
+
+//reducer to track loading of products from API
 
 const initialState = {
     products: null, 
@@ -36,7 +40,7 @@ const reducer = (state, action) => {
 
 const ProductGrid = () => {
 
-    //to track product fetch state
+    //reducer to track loading of products from API
     const [ state, dispatch ] = useReducer(reducer, initialState);
 
     //fetch products from API
@@ -65,6 +69,7 @@ const ProductGrid = () => {
         })
     }, [])
 
+    //could loading animation here
     if (state.fetchStatus === "loading") {
         return  <div className="wrapper"></div>
     }
