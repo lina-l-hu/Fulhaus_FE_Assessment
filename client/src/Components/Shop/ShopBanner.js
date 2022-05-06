@@ -1,3 +1,5 @@
+//hero banner component for the Shop page
+
 import "./shopStyles/ShopBanner.css";
 import bannerImage from "../../assets/kam-idris-_HqHX3LBN18-unsplash.jpg";
 

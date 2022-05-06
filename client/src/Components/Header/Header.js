@@ -1,7 +1,9 @@
+//Sticky Header for site
+
+
 import { useContext } from "react";
 import "./headerStyles/Header.css";
 import { CartContext } from "../Cart/CartContext";
-
 
 const Header = () => {
 
