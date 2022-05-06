@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,YAAY,CAAC;EACT,QAAQ,EAAE,QAAQ;EAClB,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,OAAO,EAAE,MAAM;EACf,gBAAgB,ECNF,OAAO;CDOxB",
+    "sources": [
+        "Shop.scss",
+        "../../../generalStyles/Variables.scss"
+    ],
+    "names": [],
+    "file": "Shop.css"
+}

@@ -1,6 +1,6 @@
 import { useState, useContext } from "react";
 import { CartContext } from "../Cart/CartContext";
-import "./ProductPreview.css"
+import "./shopStyles/ProductPreview.css"
 
 const ProductPreview = ({SKU, productName, brandName, retailPrice, productImage}) => {
     

@@ -1,6 +1,6 @@
 import { useEffect, useReducer } from "react";
 import ProductPreview from "./ProductPreview";
-import "./ProductGrid.css";
+import "./shopStyles/ProductGrid.css";
 
 const initialState = {
     products: null, 
@@ -51,7 +51,6 @@ const ProductGrid = () => {
         })
         .then(res => res.json())
         .then(data => {
-            console.log(data.data.products)
             dispatch({
                 type: "products-loaded-from-api", 
                 products: data.data.products

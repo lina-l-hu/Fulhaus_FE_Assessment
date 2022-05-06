@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import "./Header.css";
-import { CartContext } from "./Cart/CartContext";
+import "./headerStyles/Header.css";
+import { CartContext } from "../Cart/CartContext";
 
 
 const Header = () => {

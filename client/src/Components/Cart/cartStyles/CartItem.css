@@ -7,7 +7,7 @@
 }
 
 .imgDiv {
-  width: 43%;
+  width: 41.5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -44,7 +44,7 @@
 }
 
 .deleteDiv {
-  width: 2.5%;
+  width: 3.5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

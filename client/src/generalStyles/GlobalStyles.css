@@ -53,6 +53,15 @@ h1, h2, h3, h4, h5 {
   font-family: "Crimson Pro", serif;
 }
 
+h4 {
+  font-size: 30px;
+  line-height: 38.99px;
+}
+
+h5 {
+  font-size: 24px;
+}
+
 @media screen and (max-width: 767px) {
   h1 {
     font-size: 56px;
@@ -62,13 +71,6 @@ h1, h2, h3, h4, h5 {
     line-height: 55px;
   }
   h3 {
-    font-size: 24px;
-  }
-  h4 {
-    font-size: 30px;
-    line-height: 38.99px;
-  }
-  h5 {
     font-size: 24px;
   }
 }
@@ -82,14 +84,7 @@ h1, h2, h3, h4, h5 {
     line-height: 55px;
   }
   h3 {
-    font-size: 30px;
-  }
-  h4 {
-    font-size: 30px;
-    line-height: 38.99px;
-  }
-  h5 {
-    font-size: 24px;
+    font-size: 36px;
   }
 }
 
@@ -103,13 +98,6 @@ h1, h2, h3, h4, h5 {
   }
   h3 {
     font-size: 36px;
-  }
-  h4 {
-    font-size: 30px;
-    line-height: 38.99px;
-  }
-  h5 {
-    font-size: 24px;
   }
 }
 
