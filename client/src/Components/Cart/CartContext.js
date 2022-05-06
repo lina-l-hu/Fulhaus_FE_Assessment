@@ -22,9 +22,12 @@ export const CartContextProvider = ({ children }) => {
 
     //reference to the Add To Cart button (to exclude from "outside clicks" to close Cart)
     const addToCartButtonRef = useRef();
-    
+
+    //reference to the remove button for a Cart Item (to exclude from "outside clicks" to close Cart)
+
     return (
-        <CartContext.Provider value={{ selectedItems, setSelectedItems, displayCart, setDisplayCart, cartButtonRef, addToCartButtonRef}}>
+        <CartContext.Provider value={{ selectedItems, setSelectedItems, displayCart, setDisplayCart, 
+                                cartButtonRef, addToCartButtonRef}}>
             {children}
         </CartContext.Provider>
     )

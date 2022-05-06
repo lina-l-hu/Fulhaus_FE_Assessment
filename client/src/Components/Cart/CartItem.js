@@ -14,7 +14,8 @@ const CartItem = ({SKU, productName, brandName, retailPrice, productImage}) => {
       }).join(' ');
 
     //onClick function to remove item from Cart
-    const handleRemoveFromCart = () => {
+    const handleRemoveFromCart = (e) => {
+
         //as there may be duplicate items in the cart, we will only delete the first one found
         const firstIndex = selectedItems.findIndex((item) => item.SKU === SKU);
         const updatedCart = [...selectedItems.slice(0, firstIndex), ...selectedItems.slice(firstIndex+1)];
@@ -37,7 +38,7 @@ const CartItem = ({SKU, productName, brandName, retailPrice, productImage}) => {
             </div>
 
             <div className="deleteDiv">
-                <button onClick={handleRemoveFromCart}>&times;</button>
+                <button onClick={handleRemoveFromCart} className="removeButton">&times;</button>
             </div>
 
         </div>

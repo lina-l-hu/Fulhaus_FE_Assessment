@@ -11,14 +11,19 @@ const Cart = () => {
     //reference to this node so we can detect clicks out side of it (to close cart)
     const nodeRef = useRef();
 
-    const { displayCart, setDisplayCart, selectedItems, cartButtonRef, addToCartButtonRef } = useContext(CartContext);
+    const { displayCart, setDisplayCart, selectedItems, cartButtonRef, addToCartButtonRef} = useContext(CartContext);
     
     //close cart modal if we click outside of it
     window.onclick = function(event) {
-        if (nodeRef.current && !nodeRef.current.contains(event.target) && 
+        if (nodeRef.current && !nodeRef.current.contains(event.target) &&
         event.target !== cartButtonRef.current && event.target !== addToCartButtonRef.current) {
             setDisplayCart(false);
-          }
+        }
+
+        //prevent the cart from closing when an item is deleted
+        if (event.target.className.indexOf("removeButton") !== -1) {
+            setDisplayCart(true);
+        }
     }
 
     //calculate cart total
