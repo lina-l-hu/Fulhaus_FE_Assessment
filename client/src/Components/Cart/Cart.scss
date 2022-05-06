@@ -1,5 +1,104 @@
+@import "../../Variables.scss";
+
+@mixin flexColumn {
+    display: flex;
+    flex-direction: column;
+}
+
 .cartWrapper {
-    width: 42.78%;
+    position: fixed;
+    top: 72px;
+    right: 0;
+    z-index: 20;
+    // z-index: 20;
+    // display: none;
+    // width: 616px;
+    // height: 100vh - 7.8vh;
+    // display: none;
+    // .cartOpen {
+        // @include flexColumn();
+        // position: absolute;
+        // align-items: center;
+        // right: 0;
+        // background-color: white;
+        // width: 616px;
+        // max-height: 100vh - 7.8vh;
+        // padding: 0 35px 35px 35px;
+        // z-index: 20;
+    // }
+    // padding: 0 35px 35px 35px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.cartOpen {
+    // position: fixed;
+    // top: 72px;
+    // right: 0;
+    // z-index: 20;
+    // display: flex;
+    transform: translateX(0);
+}
+
+.emptyCartMessage {
+    font-size: 20px;
+    font-style: italic;
+    font-family: $fontSecondary;
+    margin-top: 35px;
+}
+
+.cartContent {
+    @include flexColumn();
+    // position: fixed;
+    align-items: center;
+    justify-content: space-between;
+    // top: 72px;
+    // right: 0;
+    background-color: white;
+    // min-width: 350px;
+    // max-width: 616px;
     height: 100vh - 7.8vh;
-    padding: 35px;
+    // z-index: 20;
+    // padding: 0 35px 35px 35px;
+    padding: 0 5% 8% 5%;
+}
+
+.cartItems {
+    overflow: scroll;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.checkoutDiv {
+    @include flexColumn();
+    width: 100%;
+
+    div {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 0;
+    }
+
+    p {
+        font-size: 36px;
+        font-family: $fontSecondary;
+    }
+}
+
+@media screen and (max-width: $mobileMaxBreakpoint) {
+    .cartContent {
+        width: 100vw;
+    }
+}
+
+@media screen and (min-width: $tabletMinBreakpoint) and (max-width: $tabletMaxBreakpoint) {
+    .cartContent {
+        width: 616px;
+    }
+}
+
+@media screen and (min-width: $desktopMinBreakpoint) {
+    .cartContent {
+        width: 616px;
+    }
 }

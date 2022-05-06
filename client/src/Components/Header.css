@@ -1,4 +1,5 @@
 .headerWrapper {
+  position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -16,10 +17,11 @@
   padding: 11px 35px;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
+  background-color: white;
+  z-index: 100;
 }
 
-.headerWrapper p {
+.headerWrapper h3 {
   font-family: "Montserrat", sans-serif;
-  font-size: 36px;
 }
 /*# sourceMappingURL=Header.css.map */

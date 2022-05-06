@@ -7,8 +7,8 @@ const ProductPreview = ({SKU, productName, brandName, retailPrice, productImage}
     //state to indicate whether the mouse is over this component
     const [ hoverMode, setHoverMode ] = useState(false);
 
-    const { selectedItems, setSelectedItems } = useContext(CartContext);
-
+    const { selectedItems, setSelectedItems, setDisplayCart, displayCart, addToCartButtonRef } = useContext(CartContext);
+    console.log("display cart", displayCart);
     //change productName to title casing
     const formattedProductName = productName.toLowerCase().split(' ').map((word) => {
         return (word.charAt(0).toUpperCase() + word.slice(1));
@@ -27,6 +27,7 @@ const ProductPreview = ({SKU, productName, brandName, retailPrice, productImage}
 
         const newCart = [...selectedItems, productToAdd];
 
+        setDisplayCart(true);
         setSelectedItems(newCart);
     }
 
@@ -43,11 +44,11 @@ const ProductPreview = ({SKU, productName, brandName, retailPrice, productImage}
             { hoverMode && (
                 <div className="infoOverlay">
                     <div>
-                        <h3>{formattedProductName}</h3>
+                        <h2>{formattedProductName}</h2>
                         <h4>{brandName.toUpperCase()}</h4>
                     </div>
                     <div className="purchaseInfo">
-                        <button onClick={handleAddToCart}>+ Add to Cart</button>
+                        <button onClick={handleAddToCart} ref={addToCartButtonRef}>+ Add to Cart</button>
                         <p>${retailPrice}</p>
                     </div>
                 </div>

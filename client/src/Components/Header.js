@@ -5,12 +5,12 @@ import { CartContext } from "./Cart/CartContext";
 
 const Header = () => {
 
-    const { setDisplayCart } = useContext(CartContext);
+    const { setDisplayCart, cartButtonRef } = useContext(CartContext);
     
     return (
         <div className="headerWrapper">
-            <p>Fülhaus Shop</p>
-            <button onClick={() => setDisplayCart(true)}>CART</button>
+            <h3>Fülhaus Shop</h3>
+            <button onClick={() => setDisplayCart(true)} ref={cartButtonRef}>CART</button>
         </div>
     )
 }

@@ -11,18 +11,13 @@
           justify-content: center;
 }
 
-.imgDiv {
-  max-height: 700px;
-  overflow: hidden;
+.bannerImage {
+  margin-top: -22%;
 }
 
-.imgDiv img {
+.bannerImage img {
   width: 100%;
-}
-
-.flip {
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg);
+  height: auto;
 }
 
 .textBanner {
@@ -37,10 +32,10 @@
       -ms-flex-pack: center;
           justify-content: center;
   background-color: #003941;
-  height: 316px;
   width: 100%;
-  margin-top: -180px;
+  margin-top: -15%;
   z-index: 10;
+  padding: 8%;
 }
 
 .textBanner h1 {
