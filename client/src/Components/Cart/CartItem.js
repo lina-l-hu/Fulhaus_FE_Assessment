@@ -1,3 +1,6 @@
+//Cart item component
+
+
 import { useContext } from "react";
 import { CartContext } from "./CartContext";
 import "./CartItem.css";
@@ -11,10 +14,12 @@ const CartItem = ({SKU, productName, brandName, retailPrice, productImage}) => {
         return (word.charAt(0).toUpperCase() + word.slice(1));
       }).join(' ');
 
+    //onClick function to single item from cart
     const handleRemoveFromCart = () => {
         //as there may be duplicate items in the cart, we will only delete the first one found
         const firstIndex = selectedItems.findIndex((item) => item.SKU === SKU);
         const updatedCart = [...selectedItems.slice(0, firstIndex), ...selectedItems.slice(firstIndex+1)];
+        
         setSelectedItems(updatedCart);
         setDisplayCart(true);
     }

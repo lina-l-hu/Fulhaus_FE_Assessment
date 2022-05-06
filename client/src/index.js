@@ -4,6 +4,7 @@ import App from './App';
 import { CartContextProvider } from './Components/Cart/CartContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
     <CartContextProvider>
         <App />

@@ -1,3 +1,5 @@
+//Shop page component
+
 
 import ShopBanner from "./ShopBanner";
 import ProductGrid from "./ProductGrid";

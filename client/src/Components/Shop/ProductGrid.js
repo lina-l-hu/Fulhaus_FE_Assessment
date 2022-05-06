@@ -1,13 +1,17 @@
+//Product grid component on Shop page
+
 import { useEffect, useReducer } from "react";
 import ProductPreview from "./ProductPreview";
 import "./ProductGrid.css";
 
+//initial state for reducer to track the load state of the products from the API
 const initialState = {
     products: null, 
     fetchStatus: "loading", 
     error: null
 }
 
+//reducer to track the load state of the products from the API
 const reducer = (state, action) => {
     switch (action.type) {
         case ("products-loaded-from-api"): {
@@ -36,7 +40,7 @@ const reducer = (state, action) => {
 
 const ProductGrid = () => {
 
-    //to track product fetch state
+    //reducer to track the load state of the products from the API
     const [ state, dispatch ] = useReducer(reducer, initialState);
 
     //fetch products from API
@@ -66,6 +70,7 @@ const ProductGrid = () => {
         })
     }, [])
 
+    //could add spinner animation here, or "products loading" message
     if (state.fetchStatus === "loading") {
         return  <div className="wrapper"></div>
     }

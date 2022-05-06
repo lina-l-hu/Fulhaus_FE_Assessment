@@ -1,3 +1,7 @@
+//App component
+
+
+
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Shop from "./Components/Shop/Shop";
 import Header from "./Components/Header";
@@ -7,16 +11,22 @@ import "./App.css";
 
 function App() {
 
+  //redirected home to Shop page for now
   return (
       <BrowserRouter>
+
         <div className="main">
+         
           <Header />
           <Cart />
+
           <Routes>
             <Route path="/" element={<Navigate to="/shop" replace />} />
             <Route path="/shop" element={<Shop />} />
           </Routes>
+
         </div>
+
       </BrowserRouter>
   );
 }

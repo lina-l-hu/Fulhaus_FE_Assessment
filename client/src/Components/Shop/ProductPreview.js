@@ -1,3 +1,6 @@
+//Product card in Product Grid component
+
+
 import { useState, useContext } from "react";
 import { CartContext } from "../Cart/CartContext";
 import "./ProductPreview.css"
@@ -8,15 +11,14 @@ const ProductPreview = ({SKU, productName, brandName, retailPrice, productImage}
     const [ hoverMode, setHoverMode ] = useState(false);
 
     const { selectedItems, setSelectedItems, setDisplayCart, displayCart, addToCartButtonRef } = useContext(CartContext);
-    console.log("display cart", displayCart);
+
     //change productName to title casing
     const formattedProductName = productName.toLowerCase().split(' ').map((word) => {
         return (word.charAt(0).toUpperCase() + word.slice(1));
       }).join(' ');
 
-    
-    const handleAddToCart = () => {
-        
+    //onClick function for Add to Cart button
+    const handleAddToCart = () => {   
         const productToAdd = {
             SKU: SKU, 
             productName: productName, 
@@ -27,11 +29,12 @@ const ProductPreview = ({SKU, productName, brandName, retailPrice, productImage}
 
         const newCart = [...selectedItems, productToAdd];
 
+        //immediately display cart upon adding item
         setDisplayCart(true);
         setSelectedItems(newCart);
     }
 
-    //I would normally wrap the img tags in a NavLink to a product details page
+    //this would normally be wrapped in a NavLink to a product details page
     return (
         <div className="productPreviewWrapper" 
             onMouseEnter={() => setHoverMode(true)}

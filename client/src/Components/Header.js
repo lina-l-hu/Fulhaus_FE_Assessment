@@ -1,3 +1,6 @@
+//Header component
+
+
 import { useContext } from "react";
 import "./Header.css";
 import { CartContext } from "./Cart/CartContext";

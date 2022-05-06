@@ -1,3 +1,6 @@
+//Banner component on Shop page
+
+
 import "./ShopBanner.css";
 import bannerImage from "../../assets/kam-idris-_HqHX3LBN18-unsplash.jpg";
 
@@ -6,7 +9,7 @@ const ShopBanner = () => {
     return (
         <div className="bannerWrapper">
             <div className="bannerImage">
-                <img  src={bannerImage} alt="yellow chair in living room" />
+                <img src={bannerImage} alt="yellow chair in living room" />
             </div>
     
             <div className="textBanner">
@@ -17,7 +20,7 @@ const ShopBanner = () => {
             </div>
         </div>
     )
-    
+       
 }
 
 export default ShopBanner;
