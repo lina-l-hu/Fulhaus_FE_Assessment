@@ -43,6 +43,7 @@
   width: 380px;
   height: 385px;
   padding: 34px 42px 34px 42px;
+  z-index: 10;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -42,6 +42,24 @@
   padding: 0 5% 8% 5%;
 }
 
+@media screen and (max-width: 767px) {
+  .cartContent {
+    width: 100vw;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .cartContent {
+    width: 616px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .cartContent {
+    width: 616px;
+  }
+}
+
 .cartItems {
   overflow: scroll;
   margin-bottom: 20px;
@@ -72,23 +90,5 @@
 .checkoutDiv p {
   font-size: 36px;
   font-family: "Montserrat", sans-serif;
-}
-
-@media screen and (max-width: 767px) {
-  .cartContent {
-    width: 100vw;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .cartContent {
-    width: 616px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .cartContent {
-    width: 616px;
-  }
 }
 /*# sourceMappingURL=Cart.css.map */
